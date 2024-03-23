@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  azeroth-dock:
+    image: ad:please
+    container_name: ad
+    ports:
+      - "8000:8000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

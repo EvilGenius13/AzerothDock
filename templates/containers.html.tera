@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker Containers</title>
+</head>
+<body>
+    <h1>Docker Containers</h1>
+    <ul>
+        {% for id in containers %}
+            <li>{{ id }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
