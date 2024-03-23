@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello, World!</title>
+    <title>Azeroth Dock</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <section class="layout">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/stacks">Stacks</a></li>
+                <li><a href="/containers">Containers</a></li>
+                <li><a href="/images">Images</a></li>
+                <li><a href="/networks">Networks</a></li>
+                <li><a href="/volumes">Volumes</a></li>
+            </ul>
+        </nav>
+        <div class="body">
+            <h1>Dashboard</h1>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p>{{ containers }}</p>
+                    <p>{{ containers_running }}</p>
+                    <p>{{ images }}</p>
+                    <p>{{ operating_system }}</p>
+                    <p>{{ ncpu }}</p>
+                    <p>{{ memory }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
