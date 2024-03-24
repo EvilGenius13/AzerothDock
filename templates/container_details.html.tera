@@ -55,31 +55,11 @@
         </nav>
         <div class="body">
             <h1>Dashboard</h1>
-            <div class="flex-dashboard">
-                <div class="dash-item">
-                    <h5><span>N/A</span> Stacks</h5>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p>{{ id }}</p>
+                    <p>{{ name }}</p>
                 </div>
-                <div class="dash-item">
-                    <h5>N/A Services</h5>
-                </div>
-                <div id="dash-containers" class="dash-item">
-                    <h5>{{containers}} Containers</h5>
-                    <p>Running {{ containers_running }}</p>
-                </div>
-                <div class="dash-item">
-                    <h5>{{ images }} Images</h5>
-                </div>
-                <div class="dash-item">
-                    <h5>N/A Volumes</h5>
-                </div>
-                <div class="dash-item">
-                    <h5>N/A Networks</h5>
-                </div>
-            </div>
-            <div class="dash-specs">
-                <p><i class="fa-solid fa-desktop"></i>{{ operating_system }}</p>
-                <p><i class="fa-solid fa-microchip"></i>{{ ncpu }}</p>
-                <p><i class="fa-solid fa-memory"></i>{{ memory }}</p>
             </div>
         </div>
     </section>

@@ -53,6 +53,17 @@ async fn containers(docker: &State<Arc<Docker>>) -> Result<Template, String> {
     Ok(Template::render("containers", &context))
 }
 
+#[get("/containers/<id>")]
+async fn container_details(docker: &State<Arc<Docker>>, id: String) -> Result<Template, String> {
+    let container_info = docker.inspect_container(&id, None).await.map_err(|e| e.to_string())?;
+
+    let mut context = HashMap::<&str, String>::new();
+    context.insert("id", container_info.id.unwrap_or_default());
+    context.insert("name", container_info.name.unwrap_or_default());
+
+    Ok(Template::render("container_details", &context))
+}
+
 #[launch]
 fn rocket() -> _ {
     let docker = Docker::connect_with_unix_defaults().expect("Failed to connec to Docker");
@@ -61,7 +72,7 @@ fn rocket() -> _ {
     println!("Starting Rocket application...");
     rocket::build()
     // .mount("/", routes![index])
-    .mount("/", routes![index, containers])
+    .mount("/", routes![index, containers, container_details])
     .mount("/static", rocket::fs::FileServer::from("static"))
     .attach(Template::fairing())
     .manage(docker)
