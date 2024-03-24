@@ -20,6 +20,7 @@ RUN rm -rf ./src ./target/release/deps/azeroth_dock*
 # Copy your actual source tree
 COPY ./src ./src
 COPY ./templates ./templates
+COPY ./static ./static
 
 # Build for release. Dependencies will be reused from cache.
 RUN cargo build --release
@@ -35,6 +36,7 @@ WORKDIR /azeroth_dock
 # Copy the compiled binary and templates directory from the builder stage
 COPY --from=builder /usr/src/azeroth_dock/target/release/azeroth_dock .
 COPY --from=builder /usr/src/azeroth_dock/templates ./templates
+COPY --from=builder /usr/src/azeroth_dock/static ./static
 
 # Ensure the binary is executable
 RUN chmod +x azeroth_dock

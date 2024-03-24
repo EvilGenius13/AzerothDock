@@ -2,14 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Docker Containers</title>
+    <title>Containers</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Docker Containers</h1>
-    <ul>
-        {% for id in containers %}
-            <li>{{ id }}</li>
-        {% endfor %}
-    </ul>
+    <section class="layout">
+        <nav class="sidebar">
+            <div id="logo">
+                <i class="fa-brands fa-docker">
+                </i> <h5>Azeroth Dock</h5>
+            </div>
+            <div id="sidebar-nav">
+                <ul>
+                    <li>
+                        <div id="sidebar-icon">
+                            </i><a href="/"><i class="fa-solid fa-chart-line"> </i>Dashboard</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="sidebar-icon">
+                            </i><a href="/"><i class="fa-solid fa-layer-group"> </i>Stacks</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="sidebar-icon">
+                            <a href="/containers"><i class="fa-solid fa-box-open"> </i>Containers</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="sidebar-icon">
+                            </i><a href="/"><i class="fa-solid fa-images"> </i>Images</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="sidebar-icon">
+                            </i><a href="/"><i class="fa-solid fa-network-wired"> </i>Networks</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="sidebar-icon">
+                        </i><a href="/"><i class="fa-solid fa-database"> </i>Volumes</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="sidebar-icon">
+                            </i><a href="/"><i class="fa-solid fa-user-secret"> </i>Secrets</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="body">
+            <h1>Docker Containers</h1>
+            <div class="flex-container">
+                <ul>
+                    {% for container in containers %}
+                        <li>{{ container["id"] }} {{ container["names"] }} {{ container["state"] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
