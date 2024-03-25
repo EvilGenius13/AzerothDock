@@ -30,6 +30,7 @@ html {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .sidebar ul {
@@ -69,6 +70,7 @@ html {
   border-radius: 5px;
   border-style: dotted;
   border-color: aqua;
+  border-width: 1px;
 }
 
 #sidebar-nav a:hover {
@@ -108,6 +110,13 @@ html {
 
 .dash-item span {
   color:aqua;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+#containers-running {
+  color: #1fdb51;
+  font-size: 14px;
 }
 
 .dash-specs {
@@ -152,6 +161,26 @@ body {
   color: #fff;
 }
 
-.flex-container {
+/* /Containers Route */
+
+.flex-containers {
   background-color: #383737;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd; /* Light line between rows */
+}
+
+tr:hover {
+  background-color: #ddd; /* Highlight on hover for rows */
 }

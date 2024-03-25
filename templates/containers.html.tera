@@ -55,13 +55,29 @@
         </nav>
         <div class="body">
             <h1>Docker Containers</h1>
-            <div class="flex-container">
-                <ul>
-                    {% for container in containers %}
-                        <li>{{ container["id"] }} {{ container["names"] }} {{ container["state"] }}</li>
-                    {% endfor %}
-                </ul>
+            <div class="flex-containers">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>State</th>
+                            <th>Image</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for container in containers %}
+                        <tr>
+                            <td>{{ container["names"] }}</td>
+                            <td>{{ container["state"] }}</td>
+                            <td>{{ container["image"] }}</i></td>
+                            <td><i class="fa-solid fa-chart-column"><i class="fa-solid fa-book"></i></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
+            
         </div>
     </section>
 </body>

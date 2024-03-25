@@ -57,23 +57,23 @@
             <h1>Dashboard</h1>
             <div class="flex-dashboard">
                 <div class="dash-item">
-                    <h5><span>N/A</span> Stacks</h5>
+                    <h5><span>N/A</span>Stacks</h5>
                 </div>
                 <div class="dash-item">
-                    <h5>N/A Services</h5>
+                    <h5><span>N/A</span>Services</h5>
                 </div>
                 <div id="dash-containers" class="dash-item">
-                    <h5>{{containers}} Containers</h5>
-                    <p>Running {{ containers_running }}</p>
+                    <h5><span>{{containers}}</span>Containers</h5>
+                    <p><span id="containers-running">Running {{ containers_running }}</span></p>
                 </div>
                 <div class="dash-item">
-                    <h5>{{ images }} Images</h5>
+                    <h5><span>{{ images }}</span>Images</h5>
                 </div>
                 <div class="dash-item">
-                    <h5>N/A Volumes</h5>
+                    <h5><span>N/A</span>Volumes</h5>
                 </div>
                 <div class="dash-item">
-                    <h5>N/A Networks</h5>
+                    <h5><span>N/A</span>Networks</h5>
                 </div>
             </div>
             <div class="dash-specs">
