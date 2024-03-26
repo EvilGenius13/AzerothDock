@@ -68,10 +68,10 @@
                     <tbody>
                         {% for container in containers %}
                         <tr>
-                            <td>{{ container["names"] }}</td>
+                            <td><a href="/containers/{{ container["id"] }}">{{ container["names"] }}</a></td>
                             <td>{{ container["state"] }}</td>
                             <td>{{ container["image"] }}</i></td>
-                            <td><i class="fa-solid fa-chart-column"><i class="fa-solid fa-book"></i></td>
+                            <td><i class="fa-solid fa-chart-column"><i class="fa-solid fa-book"></i><i class="fa-solid fa-terminal"></i></td>
                         </tr>
                         {% endfor %}
                     </tbody>

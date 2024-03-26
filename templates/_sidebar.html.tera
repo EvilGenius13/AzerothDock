@@ -1,0 +1,45 @@
+<nav class="sidebar">
+  <div id="logo">
+      <i class="fa-brands fa-docker">
+      </i> <h5>Azeroth Dock</h5>
+  </div>
+  <div id="sidebar-nav">
+      <ul>
+          <li>
+              <div id="sidebar-icon">
+                  </i><a href="/"><i class="fa-solid fa-chart-line"> </i>Dashboard</a>
+              </div>
+          </li>
+          <li>
+              <div id="sidebar-icon">
+                  </i><a href="/"><i class="fa-solid fa-layer-group"> </i>Stacks</a>
+              </div>
+          </li>
+          <li>
+              <div id="sidebar-icon">
+                  <a href="/containers"><i class="fa-solid fa-box-open"> </i>Containers</a>
+              </div>
+          </li>
+          <li>
+              <div id="sidebar-icon">
+                  </i><a href="/"><i class="fa-solid fa-images"> </i>Images</a>
+              </div>
+          </li>
+          <li>
+              <div id="sidebar-icon">
+                  </i><a href="/"><i class="fa-solid fa-network-wired"> </i>Networks</a>
+              </div>
+          </li>
+          <li>
+              <div id="sidebar-icon">
+              </i><a href="/"><i class="fa-solid fa-database"> </i>Volumes</a>
+              </div>
+          </li>
+          <li>
+              <div id="sidebar-icon">
+                  </i><a href="/"><i class="fa-solid fa-user-secret"> </i>Secrets</a>
+              </div>
+          </li>
+      </ul>
+  </div>
+</nav>

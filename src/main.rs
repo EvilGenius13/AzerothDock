@@ -39,9 +39,11 @@ async fn containers(docker: &State<Arc<Docker>>) -> Result<Template, String> {
     let container_info: Vec<HashMap<String, String>> = containers.into_iter().map(|container| {
         let mut info = HashMap::new();
         // join on name due to multiple name potential
+        info.insert("id".to_string(), container.id.unwrap_or_default());
         info.insert("names".to_string(), container.names.unwrap_or_default().join(","));
         info.insert("state".to_string(), container.state.unwrap_or_default());
-        info.insert("image".to_string(), container.image.unwrap_or_default());
+        let image_name = container.image.unwrap_or_default();
+        info.insert("image".to_string(), image_name.chars().take(50).collect());
         info
 
     }).collect();
@@ -53,9 +55,9 @@ async fn containers(docker: &State<Arc<Docker>>) -> Result<Template, String> {
 }
 
 #[get("/containers/<id>")]
-async fn container_details(docker: &State<Arc<Docker>>, id: String) -> Result<Template, String> {
+async fn container_details(docker: &State<Arc<Docker>>, id: &str) -> Result<Template, String> {
     let container_info = docker.inspect_container(&id, None).await.map_err(|e| e.to_string())?;
-
+    println!("{:?}", container_info);
     let mut context = HashMap::<&str, String>::new();
     context.insert("id", container_info.id.unwrap_or_default());
     context.insert("name", container_info.name.unwrap_or_default());

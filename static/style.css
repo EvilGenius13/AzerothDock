@@ -79,13 +79,6 @@ html {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #383737;
-}
-
 .flex-dashboard {
   display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -136,14 +129,6 @@ html {
   margin-right: 10px;
 }
 
-
-.flex-item {
-  flex: 1 1 200px;
-  background-color: #ecf0f1;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
 #logo {
   display: flex;
   flex-direction: row;
@@ -170,6 +155,10 @@ body {
   overflow-x: auto;
 }
 
+.flex-containers a {
+  color: #fff;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -183,4 +172,13 @@ th, td {
 
 tr:hover {
   background-color: #ddd; /* Highlight on hover for rows */
+}
+
+/* Container details route */
+
+.flex-item {
+  background-color: #383737;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px;
+  border-radius: 5px;
 }
