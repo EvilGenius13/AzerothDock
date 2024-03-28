@@ -159,6 +159,10 @@ body {
   color: #fff;
 }
 
+.flex-containers i {
+  padding-left: 15px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -171,7 +175,7 @@ th, td {
 }
 
 tr:hover {
-  background-color: #ddd; /* Highlight on hover for rows */
+  background-color: #ddddddb6; /* Highlight on hover for rows */
 }
 
 /* Container details route */
