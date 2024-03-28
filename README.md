@@ -1,7 +1,9 @@
 # Azeroth Dock
 A portainer alternative written in rust and I don't know why I'm even trying. (Still working on the rails version though!)
 
-Base test has memory at under 6MB and CPU usage at 0.0% on Apple Pro M1.
+## Goals
+CPU Usage: 0.05% Stretch Goal: 0.01%
+Memory Usage: < 50MB Stretch Goal: < 25MB
 
 # Commands
 - `cargo run` to run the server
